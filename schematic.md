@@ -60,6 +60,61 @@ Solar Panels → Combiner Box → MPPT Controller → Battery Bank
                              Energy Monitor → IoT Gateway → AWS IoT / Grafana
 ```
 
+## Diagram Sketches
+
+### 🧩 Basic System Block Diagram
+```plaintext
+[ Solar PV Array ]
+       │
+       ▼
+[ Combiner Box ]
+       │
+       ▼
+[ MPPT Charge Controller ]
+       │
+       ▼
+[ Battery Bank ] ←───────────────┐
+       │                         │
+       ▼                         │
+[ Hybrid Inverter ]◄───[ ATS ]◄─┤
+       │                         │
+       ▼                         ▼
+[ AC Load Distribution ]     [ Grid / Generator ]
+       │
+       ▼
+[ Pellet Production Machines ]
+       │
+       ▼
+[ Energy Monitoring System ]
+       │
+       ▼
+[ IoT Gateway → AWS IoT Core → Grafana Dashboard ]
+```
+
+### 🔌 Solar-Battery-Inverter Wiring Layout
+```plaintext
+[Panels] → [Combiner] → [MPPT Controller] → [Battery Bank]
+                             │
+                             ▼
+                       [Hybrid Inverter] ← [Grid/Gen via ATS]
+                             │
+                             ▼
+                        [AC Output to Loads]
+```
+
+### ⚙️ Load Distribution Sketch
+```plaintext
+[Hybrid Inverter AC Output]
+         │
+         ▼
+ ┌───────────────────────────┐
+ │   AC Distribution Board   │
+ ├─────────┬─────────┬───────┤
+ │ Extruder│ Grinder │ Mixer│ Dryer
+ │ (5.5kW) │ (4.0kW) │(4.0kW)│(4.7kW)
+ └─────────┴─────────┴───────┘
+```
+
 ## Notes
 - Ensure all DC wiring is properly fused.
 - Use appropriate DC isolators and surge protection.
