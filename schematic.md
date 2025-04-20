@@ -78,7 +78,7 @@ graph TD
     K --> L["AWS IoT Core"]
     L --> M["Grafana Dashboard"]
 ```
-`
+
 
 ### 🔌 Solar-Battery-Inverter Wiring Layout
 ```plaintext
