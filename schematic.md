@@ -79,30 +79,28 @@ graph TD
     L --> M["Grafana Dashboard"]
 ```
 
-
 ### 🔌 Solar-Battery-Inverter Wiring Layout
-```plaintext
-[Panels] → [Combiner] → [MPPT Controller] → [Battery Bank]
-                             │
-                             ▼
-                       [Hybrid Inverter] ← [Grid/Gen via ATS]
-                             │
-                             ▼
-                        [AC Output to Loads]
+```mermaid
+graph TD
+    S1["Solar Panels"] --> S2["Combiner Box"]
+    S2 --> S3["MPPT Charge Controller"]
+    S3 --> S4["Battery Bank"]
+    S3 --> S5["Hybrid Inverter"]
+    G1["Grid / Generator (via ATS)"] --> S5
+    S5 --> S6["AC Output to Loads"]
 ```
 
 ### ⚙️ Load Distribution Sketch
-```plaintext
-[Hybrid Inverter AC Output]
-         │
-         ▼
- ┌───────────────────────────┐
- │   AC Distribution Board   │
- ├─────────┬─────────┬───────┤
- │ Extruder│ Grinder │ Mixer│ Dryer
- │ (5.5kW) │ (4.0kW) │(4.0kW)│(4.7kW)
- └─────────┴─────────┴───────┘
+```mermaid
+graph TD
+    L1["Hybrid Inverter AC Output"] --> L2["AC Distribution Board"]
+    L2 --> L3["Extruder (5.5kW)"]
+    L2 --> L4["Grinder (4.0kW)"]
+    L2 --> L5["Mixer (4.0kW)"]
+    L2 --> L6["Dryer (4.7kW)"]
 ```
+
+> **Note:** Replace the image URLs with your actual hosted diagram links or relative paths in your project repository.
 
 ## Notes
 - Ensure all DC wiring is properly fused.
