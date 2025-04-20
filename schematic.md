@@ -62,6 +62,26 @@ Solar Panels → Combiner Box → MPPT Controller → Battery Bank
 
 ## Diagram Sketches
 
+### Basic System Block Diagram (TD Flowchart Style)
+```mermaid
+graph TD
+    A["Solar PV Array"] --> B["Combiner Box"]
+    B --> C["MPPT Charge Controller"]
+    C --> D["Battery Bank"]
+    D --> E["Hybrid Inverter"]
+    F["Grid Connection"] --> E
+    G["Diesel Generator"] --> E
+    E --> H["AC Load Distribution"]
+    H --> I["Pellet Machinery"]
+    E --> J["Energy Monitor"]
+    J --> K["IoT Gateway"]
+    K --> L["AWS IoT Core"]
+    L --> M["Grafana Dashboard"]
+```
+
+
+## Diagram Sketches
+
 ### 🧩 Basic System Block Diagram
 ```plaintext
 [ Solar PV Array ]
