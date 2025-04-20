@@ -1,4 +1,4 @@
-# Solar Hybrid Inverter System Schematic Layout (.md Format)
+# Solar Hybrid Inverter System Schematic Layout
 
 ## Overview
 This schematic layout outlines the interconnection of components for a solar hybrid inverter system designed to power a fish feed pellet production facility. The system supports machinery with a total rated load of approximately 18.2 kW.
