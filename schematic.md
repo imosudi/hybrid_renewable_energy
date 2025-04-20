@@ -50,14 +50,19 @@ This schematic layout outlines the interconnection of components for a solar hyb
 
 ## Wiring Flow (Simplified)
 
-```plaintext
-Solar Panels → Combiner Box → MPPT Controller → Battery Bank
-                                      ↓
-                                  Hybrid Inverter ← Grid / Generator (via ATS)
-                                      ↓
-                          AC Load Distribution → Pellet Production Machinery
-                                      ↓
-                             Energy Monitor → IoT Gateway → AWS IoT / Grafana
+```mermaid
+graph TD
+    A["Solar Panels"] --> B["Combiner Box"]
+    B --> C["MPPT Controller"]
+    C --> D["Battery Bank"]
+    C --> E["Hybrid Inverter"]
+    F["Grid / Generator (via ATS)"] --> E
+    E --> G["AC Load Distribution"]
+    G --> H["Pellet Production Machinery"]
+    E --> I["Energy Monitor"]
+    I --> J["IoT Gateway"]
+    J --> K["AWS IoT"]
+    K --> L["Grafana"]
 ```
 
 ## Diagram Sketches
