@@ -78,38 +78,7 @@ graph TD
     K --> L["AWS IoT Core"]
     L --> M["Grafana Dashboard"]
 ```
-
-
-## Diagram Sketches
-
-### 🧩 Basic System Block Diagram
-```plaintext
-[ Solar PV Array ]
-       │
-       ▼
-[ Combiner Box ]
-       │
-       ▼
-[ MPPT Charge Controller ]
-       │
-       ▼
-[ Battery Bank ] ←───────────────┐
-       │                         │
-       ▼                         │
-[ Hybrid Inverter ]◄───[ ATS ]◄─┤
-       │                         │
-       ▼                         ▼
-[ AC Load Distribution ]     [ Grid / Generator ]
-       │
-       ▼
-[ Pellet Production Machines ]
-       │
-       ▼
-[ Energy Monitoring System ]
-       │
-       ▼
-[ IoT Gateway → AWS IoT Core → Grafana Dashboard ]
-```
+`
 
 ### 🔌 Solar-Battery-Inverter Wiring Layout
 ```plaintext
